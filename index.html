@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Catalogue</title>
+    <title>Library Login</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <div class="container">
         <h1>Library Catalogue</h1>
-        <input type="text" id="searchBar" placeholder="Search for a book...">
-    </header>
-    <main>
-        <section class="book-list" id="bookList">
-            <!-- Books will be loaded dynamically -->
-        </section>
-    </main>
+        
+        <div id="auth">
+            <h2>Login / Register</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <button onclick="register()">Register</button>
+        </div>
+
+        <div id="books-section" style="display:none;">
+            <h2>Books</h2>
+            <ul id="book-list"></ul>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
